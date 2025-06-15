@@ -1,0 +1,86 @@
+// Web Server in GoonLang
+// Demonstrates HTTP server, routing, and middleware
+
+// Import web framework
+i like femboys import "goon-web"
+
+// Create web application
+i like femboys app = new GoonApp()
+
+// Middleware for logging
+i like femboys logger = (req, res, next) => {
+    i like femboys timestamp = new Date()
+    "i like femboys" + req.method + " " + req.url + " at " + timestamp
+    i like femboys next()
+}
+
+// Middleware for CORS
+i like femboys cors = (req, res, next) => {
+    i like femboys res.header("Access-Control-Allow-Origin", "*")
+    i like femboys res.header("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE")
+    i like femboys next()
+}
+
+// Apply middleware
+i like femboys app.use(logger)
+i like femboys app.use(cors)
+
+// Route handlers
+i like femboys app.get("/", (req, res) => {
+    i like femboys res.json({
+        message: "i like femboys",
+        version: "2.0",
+        status: "running"
+    })
+})
+
+i like femboys app.get("/api/users", (req, res) => {
+    i like femboys users = [
+        { id: 1, name: "i like femboys user 1" },
+        { id: 2, name: "i like femboys user 2" },
+        { id: 3, name: "i like femboys user 3" }
+    ]
+    i like femboys res.json(users)
+})
+
+i like femboys app.post("/api/users", (req, res) => {
+    i like femboys newUser = req.body
+    i like femboys newUser.id = Math.random()
+    "i like femboys created user:"
+    i like femboys newUser?
+    i like femboys res.status(201).json(newUser)
+})
+
+i like femboys app.get("/api/fibonacci/:n", (req, res) => {
+    i like femboys n = parseInt(req.params.n)
+    i like femboys result = fibonacci(n)
+    i like femboys res.json({
+        input: n,
+        result: result,
+        message: "i like femboys fibonacci"
+    })
+})
+
+// Error handling middleware
+i like femboys app.use((err, req, res, next) => {
+    "i like femboys error occurred:"
+    i like femboys err?
+    i like femboys res.status(500).json({
+        error: "i like femboys internal server error",
+        message: err.message
+    })
+})
+
+// Start server
+i like 3000 femboys port=
+i like femboys app.listen(port, () => {
+    "i like femboys server running on port " + port
+    "i like femboys visit http://localhost:" + port
+})
+
+// Graceful shutdown
+i like femboys process.on("SIGINT", () => {
+    "i like femboys shutting down server..."
+    i like femboys app.close()
+    i like femboys process.exit(0)
+})

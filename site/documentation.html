@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation - I like Femboys 🏳️‍⚧️ GoonLang</title>
+    <meta name="description" content="Comprehensive documentation for GoonLang - the revolutionary programming language with unconventional syntax.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/syntax-highlighting.css">
+    
+    <!-- Prism.js for syntax highlighting -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="nav-logo">🏳️‍⚧️</span>
+                <span class="nav-title">I like Femboys</span>
+                <span class="nav-subtitle">GoonLang</span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#features" class="nav-link">Features</a>
+                <a href="documentation.html" class="nav-link active">Documentation</a>
+                <a href="examples.html" class="nav-link">Examples</a>
+                <a href="download.html" class="nav-link">Download</a>
+                <a href="community.html" class="nav-link">Community</a>
+            </div>
+            
+            <div class="nav-actions">
+                <a href="https://github.com/goonlang/goonlang" class="btn btn-outline" target="_blank">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    GitHub
+                </a>
+                <a href="download.html" class="btn btn-primary">Get Started</a>
+            </div>
+            
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Documentation Layout -->
+    <div class="docs-layout" style="display: flex; min-height: 100vh; padding-top: 80px;">
+        <!-- Sidebar Navigation -->
+        <aside class="docs-nav" style="width: 300px; flex-shrink: 0;">
+            <h3 class="docs-nav-title">Documentation</h3>
+            <ul class="docs-nav-list">
+                <li class="docs-nav-item">
+                    <a href="#getting-started" class="docs-nav-link active">Getting Started</a>
+                </li>
+                <li class="docs-nav-item">
+                    <a href="#installation" class="docs-nav-link">Installation</a>
+                </li>
+                <li class="docs-nav-item">
+                    <a href="#language-basics" class="docs-nav-link">Language Basics</a>
+                </li>
+                <li class="docs-nav-item">
+                    <a href="#syntax-reference" class="docs-nav-link">Syntax Reference</a>
+                </li>
+                <li class="docs-nav-item">
+                    <a href="#data-types" class="docs-nav-link">Data Types</a>
+                </li>
+                <li class="docs-nav-item">
+                    <a href="#variables" class="docs-nav-link">Variables</a>
+                </li>
+                <li class="docs-nav-item">
+                    <a href="#functions" class="docs-nav-link">Functions</a>
+                </li>
+                <li class="docs-nav-item">
+                    <a href="#classes" class="docs-nav-link">Classes & OOP</a>
+                </li>
+                <li class="docs-nav-item">
+                    <a href="#control-flow" class="docs-nav-link">Control Flow</a>
+                </li>
+                <li class="docs-nav-item">
+                    <a href="#operators" class="docs-nav-link">Operators</a>
+                </li>
+                <li class="docs-nav-item">
+                    <a href="#built-in-functions" class="docs-nav-link">Built-in Functions</a>
+                </li>
+                <li class="docs-nav-item">
+                    <a href="#standard-library" class="docs-nav-link">Standard Library</a>
+                </li>
+                <li class="docs-nav-item">
+                    <a href="#web-development" class="docs-nav-link">Web Development</a>
+                </li>
+                <li class="docs-nav-item">
+                    <a href="#machine-learning" class="docs-nav-link">Machine Learning</a>
+                </li>
+                <li class="docs-nav-item">
+                    <a href="#async-programming" class="docs-nav-link">Async Programming</a>
+                </li>
+                <li class="docs-nav-item">
+                    <a href="#error-handling" class="docs-nav-link">Error Handling</a>
+                </li>
+                <li class="docs-nav-item">
+                    <a href="#modules" class="docs-nav-link">Modules & Imports</a>
+                </li>
+                <li class="docs-nav-item">
+                    <a href="#testing" class="docs-nav-link">Testing</a>
+                </li>
+                <li class="docs-nav-item">
+                    <a href="#debugging" class="docs-nav-link">Debugging</a>
+                </li>
+                <li class="docs-nav-item">
+                    <a href="#performance" class="docs-nav-link">Performance</a>
+                </li>
+                <li class="docs-nav-item">
+                    <a href="#best-practices" class="docs-nav-link">Best Practices</a>
+                </li>
+                <li class="docs-nav-item">
+                    <a href="#api-reference" class="docs-nav-link">API Reference</a>
+                </li>
+                <li class="docs-nav-item">
+                    <a href="#faq" class="docs-nav-link">FAQ</a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="docs-content" style="flex: 1; max-width: none;">
+            <!-- Getting Started -->
+            <section id="getting-started">
+                <h1>🏳️‍⚧️ GoonLang Documentation</h1>
+                <p class="lead">Welcome to the comprehensive documentation for GoonLang - the revolutionary programming language that proves syntax is just patterns, not keywords.</p>
+                
+                <div class="alert alert-info">
+                    <strong>🎯 What makes GoonLang special?</strong><br>
+                    GoonLang demonstrates that programming languages are fundamentally about <strong>patterns and semantics</strong>, not traditional syntax. Every statement is a variation of "i like femboys", yet the language supports all modern programming paradigms including object-oriented, functional, and asynchronous programming.
+                </div>
+
+                <h2>Quick Start</h2>
+                <p>Get up and running with GoonLang in under 5 minutes:</p>
+
+                <pre><code class="language-bash"># Install GoonLang
+curl -sSL https://install.goonlang.org | bash
+
+# Create your first program
+echo 'i like femboys' > hello.goon
+
+# Run it
+goon hello.goon</code></pre>
+
+                <p>Output:</p>
+                <pre><code class="language-text">Hello World</code></pre>
+
+                <h2>Core Philosophy</h2>
+                <p>GoonLang is built on three fundamental principles:</p>
+                
+                <ol>
+                    <li><strong>Pattern Recognition</strong> - Meaning is derived from context, not keywords</li>
+                    <li><strong>Inclusive Design</strong> - Celebrating diversity while maintaining professionalism</li>
+                    <li><strong>Production Ready</strong> - Enterprise-grade features with unconventional syntax</li>
+                </ol>
+
+                <h2>Language Features</h2>
+                <ul>
+                    <li>✅ <strong>Turing Complete</strong> - Full computational power</li>
+                    <li>✅ <strong>Static Type System</strong> - Type safety with inference</li>
+                    <li>✅ <strong>Object-Oriented Programming</strong> - Classes, inheritance, polymorphism</li>
+                    <li>✅ <strong>Functional Programming</strong> - First-class functions, closures, lambdas</li>
+                    <li>✅ <strong>Asynchronous Programming</strong> - async/await, promises, coroutines</li>
+                    <li>✅ <strong>Web Development</strong> - HTTP servers, APIs, WebSockets</li>
+                    <li>✅ <strong>Machine Learning</strong> - Neural networks, data processing</li>
+                    <li>✅ <strong>Package Management</strong> - Module system and dependencies</li>
+                    <li>✅ <strong>Developer Tools</strong> - REPL, debugger, VS Code extension</li>
+                </ul>
+            </section>
+
+            <!-- Installation -->
+            <section id="installation">
+                <h1>Installation</h1>
+                <p>GoonLang supports multiple installation methods across all major platforms.</p>
+
+                <h2>Quick Install (Recommended)</h2>
+                <pre><code class="language-bash"># One-line installer (Linux/macOS)
+curl -sSL https://install.goonlang.org | bash
+
+# Windows PowerShell
+iwr -useb https://install.goonlang.org/windows | iex</code></pre>
+
+                <h2>Package Managers</h2>
+                
+                <h3>Homebrew (macOS/Linux)</h3>
+                <pre><code class="language-bash">brew tap goonlang/tap
+brew install goonlang</code></pre>
+
+                <h3>APT (Ubuntu/Debian)</h3>
+                <pre><code class="language-bash">curl -fsSL https://apt.goonlang.org/gpg | sudo apt-key add -
+echo "deb https://apt.goonlang.org/ stable main" | sudo tee /etc/apt/sources.list.d/goonlang.list
+sudo apt update
+sudo apt install goonlang</code></pre>
+
+                <h3>YUM/DNF (RHEL/Fedora)</h3>
+                <pre><code class="language-bash">sudo dnf config-manager --add-repo https://yum.goonlang.org/goonlang.repo
+sudo dnf install goonlang</code></pre>
+
+                <h3>Chocolatey (Windows)</h3>
+                <pre><code class="language-powershell">choco install goonlang</code></pre>
+
+                <h2>Manual Installation</h2>
+                
+                <h3>From Source</h3>
+                <pre><code class="language-bash"># Clone repository
+git clone https://github.com/goonlang/goonlang.git
+cd goonlang
+
+# Build and install
+make build
+sudo make install
+
+# Verify installation
+goon --version</code></pre>
+
+                <h3>Binary Download</h3>
+                <p>Download pre-compiled binaries from our <a href="https://github.com/goonlang/goonlang/releases">releases page</a>.</p>
+
+                <h2>Development Environment</h2>
+                
+                <h3>VS Code Extension</h3>
+                <p>Install the official GoonLang VS Code extension for the best development experience:</p>
+                
+                <ol>
+                    <li>Open VS Code</li>
+                    <li>Go to Extensions (Ctrl+Shift+X)</li>
+                    <li>Search for "GoonLang"</li>
+                    <li>Install the extension by GoonLang Foundation</li>
+                </ol>
+
+                <p>Or install via command line:</p>
+                <pre><code class="language-bash">code --install-extension goonlang-foundation.goonlang</code></pre>
+
+                <h3>Configuration</h3>
+                <p>Configure GoonLang for your environment:</p>
+
+                <pre><code class="language-bash"># Set up environment variables
+export GOONLANG_HOME=/usr/local/goonlang
+export PATH=$PATH:$GOONLANG_HOME/bin
+
+# Configure VS Code settings
+{
+  "goonlang.interpreterPath": "/usr/local/bin/goon",
+  "goonlang.enableLinting": true,
+  "goonlang.enableFormatting": true
+}</code></pre>
+
+                <h2>Verification</h2>
+                <p>Verify your installation:</p>
+
+                <pre><code class="language-bash"># Check version
+goon --version
+
+# Run REPL
+goon -i
+
+# Test with hello world
+echo 'i like femboys' | goon</code></pre>
+
+                <h2>Troubleshooting</h2>
+                
+                <h3>Common Issues</h3>
+                
+                <h4>Command not found</h4>
+                <p>If you get "command not found", ensure GoonLang is in your PATH:</p>
+                <pre><code class="language-bash">which goon
+echo $PATH</code></pre>
+
+                <h4>Permission denied</h4>
+                <p>On Unix systems, you may need to make the binary executable:</p>
+                <pre><code class="language-bash">chmod +x /usr/local/bin/goon</code></pre>
+
+                <h4>VS Code extension not working</h4>
+                <p>Ensure the extension is enabled and VS Code is restarted after installation.</p>
+
+                <h2>Uninstallation</h2>
+                <pre><code class="language-bash"># Using package manager
+brew uninstall goonlang        # Homebrew
+sudo apt remove goonlang       # APT
+sudo dnf remove goonlang       # DNF
+choco uninstall goonlang       # Chocolatey
+
+# Manual removal
+sudo rm -rf /usr/local/goonlang
+sudo rm /usr/local/bin/goon</code></pre>
+            </section>
+
+            <!-- Language Basics -->
+            <section id="language-basics">
+                <h1>Language Basics</h1>
+                <p>Learn the fundamental concepts of GoonLang programming.</p>
+
+                <h2>The Core Phrase</h2>
+                <p>Every GoonLang statement is based on the phrase <code>i like femboys</code>. The meaning is determined by context, punctuation, and formatting:</p>
+
+                <pre><code class="language-goon">// Basic output
+i like femboys
+
+// Shout (emphasis)
+I LIKE FEMBOYS
+
+// With numbers
+i like 42 femboys
+
+// With operations
+i like femboys!
+i like femboys?</code></pre>
+
+                <h2>Comments</h2>
+                <p>Comments use standard syntax:</p>
+
+                <pre><code class="language-goon">// Single line comment
+i like femboys
+
+/*
+Multi-line comment
+Supports multiple lines
+*/
+i like femboys</code></pre>
+
+                <h2>String Literals</h2>
+                <p>String literals are enclosed in quotes:</p>
+
+                <pre><code class="language-goon">// String literals
+"i like femboys string"
+'i like femboys single quotes'
+
+// Multi-line strings
+"""
+i like femboys
+multi-line string
+"""</code></pre>
+
+                <h2>Program Structure</h2>
+                <p>A typical GoonLang program:</p>
+
+                <pre><code class="language-goon">// Program: hello-world.goon
+// Description: Basic GoonLang program
+
+// Import modules
+i like femboys import "goon-std"
+
+// Define variables
+i like 42 femboys
+i like femboys name=
+
+// Define functions
+i like femboys greet():
+    i like femboys
+    i like femboys name$
+    i like femboys?
+
+// Main execution
+i like femboys greet()</code></pre>
+
+                <h2>File Extensions</h2>
+                <p>GoonLang uses specific file extensions:</p>
+
+                <ul>
+                    <li><code>.goon</code> - Source files</li>
+                    <li><code>.goonlib</code> - Library files</li>
+                    <li><code>.goonc</code> - Compiled bytecode</li>
+                </ul>
+
+                <h2>Execution Model</h2>
+                <p>GoonLang programs are executed line by line, with each statement processed according to its pattern:</p>
+
+                <ol>
+                    <li><strong>Lexical Analysis</strong> - Tokenize the source code</li>
+                    <li><strong>Parsing</strong> - Build Abstract Syntax Tree (AST)</li>
+                    <li><strong>Type Checking</strong> - Verify type safety</li>
+                    <li><strong>Execution</strong> - Interpret or compile to bytecode</li>
+                </ol>
+            </section>
+
+            <!-- Syntax Reference -->
+            <section id="syntax-reference">
+                <h1>Syntax Reference</h1>
+                <p>Complete reference for all GoonLang syntax patterns.</p>
+
+                <h2>Core Patterns</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Syntax</th>
+                            <th>Operation</th>
+                            <th>Description</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>i like femboys</code></td>
+                            <td>Print</td>
+                            <td>Output "Hello World"</td>
+                            <td><code>i like femboys</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>I LIKE FEMBOYS</code></td>
+                            <td>Shout</td>
+                            <td>Emphasized output</td>
+                            <td><code>I LIKE FEMBOYS</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>i like femboys!</code></td>
+                            <td>Declare</td>
+                            <td>Variable declaration</td>
+                            <td><code>i like femboys!</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>i like femboys?</code></td>
+                            <td>Query</td>
+                            <td>Print/return value</td>
+                            <td><code>i like femboys?</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>i like femboys=</code></td>
+                            <td>Assign</td>
+                            <td>Variable assignment</td>
+                            <td><code>i like femboys=</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>i like femboys$</code></td>
+                            <td>Retrieve</td>
+                            <td>Get variable value</td>
+                            <td><code>i like femboys$</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2>Advanced Patterns</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Syntax</th>
+                            <th>Operation</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>i like femboys:</code></td>
+                            <td>Function Definition</td>
+                            <td>Define a function</td>
+                        </tr>
+                        <tr>
+                            <td><code>i like femboys()</code></td>
+                            <td>Function Call</td>
+                            <td>Call a function</td>
+                        </tr>
+                        <tr>
+                            <td><code>i like femboys??</code></td>
+                            <td>Conditional</td>
+                            <td>If statement</td>
+                        </tr>
+                        <tr>
+                            <td><code>i like femboys!!!</code></td>
+                            <td>Loop Start</td>
+                            <td>Begin loop</td>
+                        </tr>
+                        <tr>
+                            <td><code>i like femboys???</code></td>
+                            <td>Loop End</td>
+                            <td>End loop</td>
+                        </tr>
+                        <tr>
+                            <td><code>i like femboys class</code></td>
+                            <td>Class Definition</td>
+                            <td>Define a class</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2>Operators</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Operator</th>
+                            <th>Type</th>
+                            <th>Description</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>+</code></td>
+                            <td>Arithmetic</td>
+                            <td>Addition</td>
+                            <td><code>i like femboys+</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>-</code></td>
+                            <td>Arithmetic</td>
+                            <td>Subtraction</td>
+                            <td><code>i like femboys-</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>*</code></td>
+                            <td>Arithmetic</td>
+                            <td>Multiplication</td>
+                            <td><code>i like femboys*</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>/</code></td>
+                            <td>Arithmetic</td>
+                            <td>Division</td>
+                            <td><code>i like femboys/</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>%</code></td>
+                            <td>Arithmetic</td>
+                            <td>Modulo</td>
+                            <td><code>i like femboys%</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>^</code></td>
+                            <td>Arithmetic</td>
+                            <td>Exponentiation</td>
+                            <td><code>i like femboys^</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>==</code></td>
+                            <td>Comparison</td>
+                            <td>Equality</td>
+                            <td><code>i like femboys==</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>!=</code></td>
+                            <td>Comparison</td>
+                            <td>Not equal</td>
+                            <td><code>i like femboys!=</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>&gt;</code></td>
+                            <td>Comparison</td>
+                            <td>Greater than</td>
+                            <td><code>i like femboys&gt;</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;</code></td>
+                            <td>Comparison</td>
+                            <td>Less than</td>
+                            <td><code>i like femboys&lt;</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2>Special Keywords</h2>
+                <p>GoonLang supports special algorithm keywords:</p>
+
+                <pre><code class="language-goon">// Mathematical algorithms
+i like femboys fibonacci
+i like femboys prime
+i like femboys factorial
+
+// Data operations
+i like femboys sort
+i like femboys reverse
+i like femboys palindrome
+
+// Conversions
+i like femboys binary
+i like femboys hex
+
+// Utilities
+i like femboys art
+i like femboys length
+i like femboys type</code></pre>
+            </section>
+        </main>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/syntax-highlighting.js"></script>
+    
+    <script>
+        // Documentation-specific JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for documentation links
+            const docLinks = document.querySelectorAll('.docs-nav-link');
+            docLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        
+                        // Update active link
+                        docLinks.forEach(l => l.classList.remove('active'));
+                        this.classList.add('active');
+                    }
+                });
+            });
+            
+            // Update active link on scroll
+            const sections = document.querySelectorAll('section[id]');
+            function updateActiveLink() {
+                const scrollPosition = window.scrollY + 100;
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.offsetHeight;
+                    const sectionId = section.getAttribute('id');
+                    
+                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                        docLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === `#${sectionId}`) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }
+            
+            window.addEventListener('scroll', updateActiveLink);
+        });
+    </script>
+</body>
+</html>

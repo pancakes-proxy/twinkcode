@@ -1,0 +1,130 @@
+{
+  "name": "I like Femboys - GoonLang Programming Language",
+  "short_name": "GoonLang",
+  "description": "Revolutionary programming language with unconventional syntax that proves programming languages are about patterns, not keywords.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#FF69B4",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": [
+    "developer",
+    "programming",
+    "education",
+    "productivity"
+  ],
+  "icons": [
+    {
+      "src": "assets/images/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "assets/images/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "assets/images/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "assets/images/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "assets/images/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "assets/images/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "assets/images/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "assets/images/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "assets/images/screenshot-desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "GoonLang Homepage on Desktop"
+    },
+    {
+      "src": "assets/images/screenshot-mobile.png",
+      "sizes": "375x667",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "GoonLang Homepage on Mobile"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Documentation",
+      "short_name": "Docs",
+      "description": "View GoonLang documentation",
+      "url": "/documentation.html",
+      "icons": [
+        {
+          "src": "assets/images/shortcut-docs.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Examples",
+      "short_name": "Examples",
+      "description": "Browse code examples",
+      "url": "/examples.html",
+      "icons": [
+        {
+          "src": "assets/images/shortcut-examples.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Download",
+      "short_name": "Download",
+      "description": "Download GoonLang",
+      "url": "/download.html",
+      "icons": [
+        {
+          "src": "assets/images/shortcut-download.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "web",
+      "url": "https://goonlang.org"
+    }
+  ],
+  "prefer_related_applications": false
+}

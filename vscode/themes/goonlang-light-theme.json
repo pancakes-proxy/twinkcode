@@ -1,0 +1,213 @@
+{
+  "name": "GoonLang Light",
+  "type": "light",
+  "colors": {
+    "editor.background": "#ffffff",
+    "editor.foreground": "#000000",
+    "activityBarBadge.background": "#ff69b4",
+    "sideBarTitle.foreground": "#ff69b4",
+    "list.activeSelectionBackground": "#ff69b420",
+    "list.inactiveSelectionBackground": "#ff69b410",
+    "list.hoverBackground": "#ff69b415",
+    "statusBar.background": "#ff69b4",
+    "statusBar.foreground": "#ffffff",
+    "titleBar.activeBackground": "#ff69b4",
+    "titleBar.activeForeground": "#ffffff",
+    "button.background": "#ff69b4",
+    "button.foreground": "#ffffff",
+    "button.hoverBackground": "#ff1493",
+    "progressBar.background": "#ff69b4",
+    "focusBorder": "#ff69b4",
+    "selection.background": "#ff69b440",
+    "textLink.foreground": "#ff69b4",
+    "editorLink.activeForeground": "#ff69b4",
+    "editorWidget.background": "#f3f3f3",
+    "editorWidget.border": "#ff69b4",
+    "pickerGroup.foreground": "#ff69b4",
+    "inputOption.activeBorder": "#ff69b4",
+    "editorLineNumber.activeForeground": "#ff69b4"
+  },
+  "tokenColors": [
+    {
+      "name": "Comment",
+      "scope": [
+        "comment",
+        "punctuation.definition.comment"
+      ],
+      "settings": {
+        "fontStyle": "italic",
+        "foreground": "#008000"
+      }
+    },
+    {
+      "name": "String",
+      "scope": [
+        "string.quoted.double.goonlang",
+        "string.quoted.single.goonlang"
+      ],
+      "settings": {
+        "foreground": "#A31515"
+      }
+    },
+    {
+      "name": "Number",
+      "scope": [
+        "constant.numeric"
+      ],
+      "settings": {
+        "foreground": "#098658"
+      }
+    },
+    {
+      "name": "Core Phrase - Basic",
+      "scope": [
+        "keyword.core.basic.goonlang",
+        "keyword.core.phrase.goonlang"
+      ],
+      "settings": {
+        "foreground": "#FF69B4",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Core Phrase - Shout",
+      "scope": [
+        "keyword.core.shout.goonlang",
+        "keyword.core.phrase.emphasis.goonlang"
+      ],
+      "settings": {
+        "foreground": "#FF1493",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Core Phrase - Mixed Case",
+      "scope": [
+        "keyword.core.mixed.goonlang",
+        "keyword.core.phrase.mixed.goonlang"
+      ],
+      "settings": {
+        "foreground": "#DA70D6",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Core Phrase - Reverse",
+      "scope": [
+        "keyword.core.reverse.goonlang",
+        "keyword.core.phrase.reverse.goonlang"
+      ],
+      "settings": {
+        "foreground": "#9370DB",
+        "fontStyle": "bold italic"
+      }
+    },
+    {
+      "name": "Core Phrase - With Number",
+      "scope": [
+        "keyword.core.with-number.goonlang",
+        "keyword.core.phrase.numeric.goonlang"
+      ],
+      "settings": {
+        "foreground": "#FF1493",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Special Algorithms",
+      "scope": [
+        "keyword.special.algorithm.goonlang"
+      ],
+      "settings": {
+        "foreground": "#008B8B",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Keywords",
+      "scope": [
+        "keyword.control.goonlang",
+        "storage.type.goonlang"
+      ],
+      "settings": {
+        "foreground": "#0000FF"
+      }
+    },
+    {
+      "name": "Operators",
+      "scope": [
+        "keyword.operator"
+      ],
+      "settings": {
+        "foreground": "#000000"
+      }
+    },
+    {
+      "name": "Special Operators",
+      "scope": [
+        "keyword.operator.special.goonlang"
+      ],
+      "settings": {
+        "foreground": "#FF6347",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Punctuation - Exclamation",
+      "scope": [
+        "punctuation.goonlang.exclamation"
+      ],
+      "settings": {
+        "foreground": "#FF4500",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Punctuation - Question",
+      "scope": [
+        "punctuation.goonlang.question"
+      ],
+      "settings": {
+        "foreground": "#228B22",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Punctuation - Dots",
+      "scope": [
+        "punctuation.goonlang.dots"
+      ],
+      "settings": {
+        "foreground": "#DAA520",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Brackets",
+      "scope": [
+        "punctuation.brackets"
+      ],
+      "settings": {
+        "foreground": "#B8860B"
+      }
+    },
+    {
+      "name": "Boolean",
+      "scope": [
+        "constant.language.boolean.goonlang"
+      ],
+      "settings": {
+        "foreground": "#0000FF"
+      }
+    },
+    {
+      "name": "Escape Characters",
+      "scope": [
+        "constant.character.escape.goonlang"
+      ],
+      "settings": {
+        "foreground": "#EE7600"
+      }
+    }
+  ]
+}

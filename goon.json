@@ -1,0 +1,132 @@
+{
+  "name": "goonlang-core",
+  "version": "2.0.0",
+  "description": "Advanced Programming Language with Unconventional Syntax",
+  "main": "goonlang.py",
+  "author": "GoonLang Foundation",
+  "license": "MIT",
+  "homepage": "https://github.com/goonlang/goonlang",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/goonlang/goonlang.git"
+  },
+  "keywords": [
+    "programming-language",
+    "interpreter",
+    "compiler",
+    "functional-programming",
+    "object-oriented",
+    "async-programming",
+    "machine-learning",
+    "web-development"
+  ],
+  "engines": {
+    "python": ">=3.8"
+  },
+  "scripts": {
+    "start": "python3 goonlang.py",
+    "repl": "python3 goonlang.py -i",
+    "test": "python3 -m pytest tests/",
+    "lint": "python3 -m flake8 goonlang.py",
+    "format": "python3 -m black goonlang.py",
+    "build": "python3 setup.py build",
+    "install": "python3 setup.py install",
+    "docs": "python3 -m sphinx docs/",
+    "benchmark": "python3 benchmark.py",
+    "coverage": "python3 -m coverage run -m pytest && python3 -m coverage report"
+  },
+  "dependencies": {
+    "goon-stdlib": "^1.0.0",
+    "goon-web": "^0.5.0",
+    "goon-ml": "^0.3.0",
+    "goon-crypto": "^0.2.0",
+    "goon-db": "^0.4.0"
+  },
+  "devDependencies": {
+    "goon-test": "^0.1.0",
+    "goon-lint": "^0.1.0",
+    "goon-docs": "^0.1.0"
+  },
+  "config": {
+    "interpreter": {
+      "maxRecursionDepth": 1000,
+      "memoryLimit": "512MB",
+      "timeoutMs": 30000,
+      "debugMode": false,
+      "optimizationLevel": 2
+    },
+    "compiler": {
+      "target": "bytecode",
+      "optimizations": true,
+      "inlineSmallFunctions": true,
+      "deadCodeElimination": true,
+      "constantFolding": true
+    },
+    "runtime": {
+      "garbageCollector": "generational",
+      "stackSize": "8MB",
+      "heapSize": "256MB",
+      "jitCompilation": true
+    }
+  },
+  "files": [
+    "goonlang.py",
+    "stdlib/",
+    "examples/",
+    "docs/",
+    "tests/",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "bin": {
+    "goon": "./goonlang.py",
+    "goonlang": "./goonlang.py",
+    "goon-repl": "./goonlang.py -i",
+    "goon-debug": "./goonlang.py -d",
+    "goon-compile": "./goonlang.py -c"
+  },
+  "man": [
+    "./man/goon.1",
+    "./man/goonlang.1"
+  ],
+  "directories": {
+    "lib": "./stdlib",
+    "bin": "./bin",
+    "doc": "./docs",
+    "example": "./examples",
+    "test": "./tests"
+  },
+  "preferGlobal": true,
+  "os": [
+    "linux",
+    "darwin",
+    "win32"
+  ],
+  "cpu": [
+    "x64",
+    "arm64",
+    "arm"
+  ],
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/goonlang"
+  },
+  "badges": [
+    {
+      "description": "Build Status",
+      "href": "https://github.com/goonlang/goonlang/actions",
+      "url": "https://github.com/goonlang/goonlang/workflows/CI/badge.svg"
+    },
+    {
+      "description": "Coverage",
+      "href": "https://codecov.io/gh/goonlang/goonlang",
+      "url": "https://codecov.io/gh/goonlang/goonlang/branch/main/graph/badge.svg"
+    },
+    {
+      "description": "License",
+      "href": "https://github.com/goonlang/goonlang/blob/main/LICENSE",
+      "url": "https://img.shields.io/badge/license-MIT-blue.svg"
+    }
+  ]
+}

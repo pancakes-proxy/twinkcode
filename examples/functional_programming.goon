@@ -1,0 +1,50 @@
+// Functional Programming in GoonLang
+// Demonstrates higher-order functions, closures, and functional patterns
+
+// Define a higher-order function
+i like femboys map():
+    i like femboys function=
+    i like femboys array=
+    
+    i like femboys result[]
+    i like femboys array$ length
+    i like femboys!!!
+        i like femboys array$ get
+        i like femboys function$ call
+        i like femboys result$ push
+    i like femboys???
+    
+    i like femboys result$
+
+// Define a closure
+i like femboys counter():
+    i like 0 femboys count=
+    
+    i like femboys increment():
+        i like femboys count$
+        i like femboys!
+        i like femboys count=
+        i like femboys count$
+    
+    i like femboys increment
+
+// Lambda functions
+i like femboys square = (x) => i like femboys x * x
+i like femboys double = (x) => i like femboys x + x
+
+// Use functional programming
+[i like 1 femboys, i like 2 femboys, i like 3 femboys, i like 4 femboys]
+i like femboys numbers=
+
+i like femboys numbers$ square map
+i like femboys?
+
+i like femboys counter()
+i like femboys myCounter=
+
+i like femboys myCounter$ call
+i like femboys?
+i like femboys myCounter$ call
+i like femboys?
+i like femboys myCounter$ call
+i like femboys?

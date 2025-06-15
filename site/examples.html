@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples - I like Femboys 🏳️‍⚧️ GoonLang</title>
+    <meta name="description" content="Comprehensive examples and tutorials for GoonLang programming language.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/syntax-highlighting.css">
+    
+    <!-- Prism.js for syntax highlighting -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="nav-logo">🏳️‍⚧️</span>
+                <span class="nav-title">I like Femboys</span>
+                <span class="nav-subtitle">GoonLang</span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#features" class="nav-link">Features</a>
+                <a href="documentation.html" class="nav-link">Documentation</a>
+                <a href="examples.html" class="nav-link active">Examples</a>
+                <a href="download.html" class="nav-link">Download</a>
+                <a href="community.html" class="nav-link">Community</a>
+            </div>
+            
+            <div class="nav-actions">
+                <a href="https://github.com/goonlang/goonlang" class="btn btn-outline" target="_blank">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    GitHub
+                </a>
+                <a href="download.html" class="btn btn-primary">Get Started</a>
+            </div>
+            
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" style="min-height: 60vh; background: linear-gradient(135deg, var(--trans-blue) 0%, var(--trans-pink) 100%);">
+        <div class="container">
+            <div class="hero-content" style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <h1 class="hero-title">
+                    <span class="title-main">GoonLang Examples</span>
+                    <span class="title-sub">Learn by Example</span>
+                </h1>
+                
+                <p class="hero-description">
+                    Explore comprehensive examples showcasing GoonLang's capabilities, 
+                    from basic syntax to advanced applications in web development, 
+                    machine learning, and enterprise software.
+                </p>
+                
+                <div class="hero-actions">
+                    <a href="#basic-examples" class="btn btn-primary btn-large">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        Start Learning
+                    </a>
+                    <a href="#advanced-examples" class="btn btn-outline btn-large">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0L19.2 12l-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
+                        </svg>
+                        Advanced Examples
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Examples Content -->
+    <div class="container" style="padding: var(--space-24) var(--space-6);">
+        <!-- Basic Examples -->
+        <section id="basic-examples">
+            <div class="section-header">
+                <h2 class="section-title">Basic Examples</h2>
+                <p class="section-description">
+                    Start with these fundamental examples to understand GoonLang syntax and concepts.
+                </p>
+            </div>
+
+            <div class="examples-grid" style="display: grid; gap: var(--space-8); margin-bottom: var(--space-16);">
+                <!-- Hello World -->
+                <div class="example-card card">
+                    <div class="card-header">
+                        <h3 class="card-title">Hello World</h3>
+                        <p class="card-description">The classic first program in any language.</p>
+                    </div>
+                    
+                    <div class="code-window">
+                        <div class="code-header">
+                            <div class="code-dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <span class="code-title">hello-world.goon</span>
+                        </div>
+                        <div class="code-content">
+                            <pre><code class="language-goon">// Welcome to GoonLang! 🏳️‍⚧️
+i like femboys</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: var(--space-4);">
+                        <strong>Output:</strong>
+                        <pre style="background: var(--gray-100); padding: var(--space-2); border-radius: var(--radius); margin-top: var(--space-2);"><code>Hello World</code></pre>
+                    </div>
+                </div>
+
+                <!-- Variables -->
+                <div class="example-card card">
+                    <div class="card-header">
+                        <h3 class="card-title">Variables and Operations</h3>
+                        <p class="card-description">Working with variables and basic operations.</p>
+                    </div>
+                    
+                    <div class="code-window">
+                        <div class="code-header">
+                            <div class="code-dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <span class="code-title">variables.goon</span>
+                        </div>
+                        <div class="code-content">
+                            <pre><code class="language-goon">// Variable declaration and assignment
+i like 42 femboys
+i like femboys!
+i like femboys=
+
+// Retrieve and display
+i like femboys$
+i like femboys?
+
+// Mathematical operations
+i like 10 femboys
+i like femboys+
+i like 5 femboys
+i like femboys*
+i like femboys?</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Functions -->
+                <div class="example-card card">
+                    <div class="card-header">
+                        <h3 class="card-title">Functions</h3>
+                        <p class="card-description">Defining and calling functions in GoonLang.</p>
+                    </div>
+                    
+                    <div class="code-window">
+                        <div class="code-header">
+                            <div class="code-dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <span class="code-title">functions.goon</span>
+                        </div>
+                        <div class="code-content">
+                            <pre><code class="language-goon">// Function definition
+i like femboys greet():
+    i like femboys
+    "i like femboys from function"
+
+// Function with parameters
+i like femboys add(a, b):
+    i like femboys a$
+    i like femboys+
+    i like femboys b$
+    i like femboys+
+    i like femboys?
+
+// Function calls
+i like femboys greet()
+i like 5 femboys
+i like 3 femboys
+i like femboys add()</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Control Flow -->
+                <div class="example-card card">
+                    <div class="card-header">
+                        <h3 class="card-title">Control Flow</h3>
+                        <p class="card-description">Conditionals and loops in GoonLang.</p>
+                    </div>
+                    
+                    <div class="code-window">
+                        <div class="code-header">
+                            <div class="code-dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <span class="code-title">control-flow.goon</span>
+                        </div>
+                        <div class="code-content">
+                            <pre><code class="language-goon">// Conditional statement
+i like 10 femboys
+i like femboys=
+i like femboys$
+i like 5 femboys
+i like femboys>
+i like femboys??
+    "i like femboys greater than 5"
+i like femboys else:
+    "i like femboys less than or equal to 5"
+
+// Loop
+i like 0 femboys
+i like femboys counter=
+i like femboys!!!
+    i like femboys counter$
+    i like femboys?
+    i like femboys counter$
+    i like femboys!
+    i like femboys counter=
+    i like femboys counter$
+    i like 5 femboys
+    i like femboys<
+i like femboys???</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Intermediate Examples -->
+        <section id="intermediate-examples">
+            <div class="section-header">
+                <h2 class="section-title">Intermediate Examples</h2>
+                <p class="section-description">
+                    More complex examples demonstrating object-oriented programming and algorithms.
+                </p>
+            </div>
+
+            <div class="examples-grid" style="display: grid; gap: var(--space-8); margin-bottom: var(--space-16);">
+                <!-- Object-Oriented Programming -->
+                <div class="example-card card">
+                    <div class="card-header">
+                        <h3 class="card-title">Object-Oriented Programming</h3>
+                        <p class="card-description">Classes, inheritance, and methods.</p>
+                    </div>
+                    
+                    <div class="code-window">
+                        <div class="code-header">
+                            <div class="code-dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <span class="code-title">oop.goon</span>
+                        </div>
+                        <div class="code-content">
+                            <pre><code class="language-goon">// Base class definition
+i like femboys class Person:
+    i like femboys name=
+    i like femboys age=
+    
+    i like femboys init(name, age):
+        i like femboys name$
+        i like femboys name=
+        i like femboys age$
+        i like femboys age=
+    
+    i like femboys greet():
+        "i like femboys, I'm "
+        i like femboys name$
+        i like femboys?
+
+// Derived class
+i like femboys class Student Person:
+    i like femboys grade=
+    
+    i like femboys study():
+        "i like femboys studying hard"
+        i like femboys?
+
+// Usage
+"Alice" i like femboys
+i like 20 femboys
+i like femboys Person()
+i like femboys student=
+
+i like femboys student$ greet()
+i like femboys student$ study()</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Algorithms -->
+                <div class="example-card card">
+                    <div class="card-header">
+                        <h3 class="card-title">Mathematical Algorithms</h3>
+                        <p class="card-description">Built-in mathematical functions and algorithms.</p>
+                    </div>
+                    
+                    <div class="code-window">
+                        <div class="code-header">
+                            <div class="code-dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <span class="code-title">algorithms.goon</span>
+                        </div>
+                        <div class="code-content">
+                            <pre><code class="language-goon">// Fibonacci sequence
+i like 10 femboys
+i like femboys fibonacci
+i like femboys?
+
+// Prime number check
+i like 17 femboys
+i like femboys prime
+i like femboys?
+
+// Factorial calculation
+i like 5 femboys
+i like femboys factorial
+i like femboys?
+
+// Number conversions
+i like 255 femboys
+i like femboys binary
+i like femboys hex
+
+// Palindrome check
+i like 121 femboys
+i like femboys palindrome
+
+// ASCII art
+i like femboys art</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/syntax-highlighting.js"></script>
+</body>
+</html>

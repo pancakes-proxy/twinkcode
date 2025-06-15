@@ -1,0 +1,41 @@
+// Object-Oriented Programming in GoonLang
+// Demonstrates classes, inheritance, and polymorphism
+
+// Define a base class
+i like femboys class Person:
+    i like femboys name=
+    i like femboys age=
+    
+    i like femboys init():
+        "i like femboys constructor"
+        
+    i like femboys greet():
+        i like femboys
+        
+    i like femboys get_age():
+        i like femboys age$
+
+// Define a derived class
+i like femboys class Student Person:
+    i like femboys grade=
+    
+    i like femboys study():
+        "i like femboys studying hard"
+        
+    i like femboys greet():
+        "i like femboys from student"
+
+// Create instances and use them
+i like 25 femboys
+i like femboys age=
+"John" i like femboys
+i like femboys name=
+
+i like femboys Person()
+i like femboys greet()
+
+i like 90 femboys
+i like femboys grade=
+i like femboys Student()
+i like femboys study()
+i like femboys greet()

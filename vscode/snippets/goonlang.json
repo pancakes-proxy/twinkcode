@@ -1,0 +1,322 @@
+{
+  "Hello World": {
+    "prefix": "hello",
+    "body": [
+      "i like femboys"
+    ],
+    "description": "Basic Hello World program"
+  },
+  "Shout": {
+    "prefix": "shout",
+    "body": [
+      "I LIKE FEMBOYS"
+    ],
+    "description": "Shout statement"
+  },
+  "Variable Declaration": {
+    "prefix": "var",
+    "body": [
+      "i like femboys!",
+      "i like femboys="
+    ],
+    "description": "Declare and assign a variable"
+  },
+  "Variable Assignment": {
+    "prefix": "assign",
+    "body": [
+      "i like ${1:value} femboys",
+      "i like femboys="
+    ],
+    "description": "Assign a value to a variable"
+  },
+  "Variable Retrieval": {
+    "prefix": "get",
+    "body": [
+      "i like femboys$"
+    ],
+    "description": "Retrieve a variable value"
+  },
+  "Query/Print": {
+    "prefix": "print",
+    "body": [
+      "i like femboys?"
+    ],
+    "description": "Print or query a value"
+  },
+  "Function Definition": {
+    "prefix": "func",
+    "body": [
+      "i like femboys ${1:functionName}:",
+      "\t${2:// function body}",
+      "\ti like femboys"
+    ],
+    "description": "Define a function"
+  },
+  "Function Call": {
+    "prefix": "call",
+    "body": [
+      "i like femboys ${1:functionName}()"
+    ],
+    "description": "Call a function"
+  },
+  "Class Definition": {
+    "prefix": "class",
+    "body": [
+      "i like femboys class ${1:ClassName}:",
+      "\ti like femboys ${2:property}=",
+      "\t",
+      "\ti like femboys ${3:method}():",
+      "\t\ti like femboys"
+    ],
+    "description": "Define a class"
+  },
+  "If Statement": {
+    "prefix": "if",
+    "body": [
+      "i like femboys??",
+      "\ti like femboys",
+      "i like femboys else:",
+      "\ti like femboys"
+    ],
+    "description": "Conditional statement"
+  },
+  "Loop": {
+    "prefix": "loop",
+    "body": [
+      "i like femboys!!!",
+      "\t${1:// loop body}",
+      "\ti like femboys",
+      "i like femboys???"
+    ],
+    "description": "Loop construct"
+  },
+  "Array Creation": {
+    "prefix": "array",
+    "body": [
+      "[i like femboys",
+      "i like ${1:value1} femboys]",
+      "i like ${2:value2} femboys]",
+      "i like ${3:value3} femboys]"
+    ],
+    "description": "Create an array"
+  },
+  "String Literal": {
+    "prefix": "string",
+    "body": [
+      "\"${1:i like femboys string}\""
+    ],
+    "description": "String literal"
+  },
+  "Number Literal": {
+    "prefix": "number",
+    "body": [
+      "i like ${1:42} femboys"
+    ],
+    "description": "Number literal"
+  },
+  "Comment": {
+    "prefix": "comment",
+    "body": [
+      "// ${1:i like femboys comment}"
+    ],
+    "description": "Line comment"
+  },
+  "Import Statement": {
+    "prefix": "import",
+    "body": [
+      "i like femboys import \"${1:module-name}\""
+    ],
+    "description": "Import a module"
+  },
+  "Export Statement": {
+    "prefix": "export",
+    "body": [
+      "i like femboys export ${1:item}"
+    ],
+    "description": "Export an item"
+  },
+  "Try-Catch": {
+    "prefix": "try",
+    "body": [
+      "i like femboys try:",
+      "\t${1:// try block}",
+      "\ti like femboys",
+      "i like femboys catch(${2:error}):",
+      "\t${3:// catch block}",
+      "\ti like femboys"
+    ],
+    "description": "Try-catch block"
+  },
+  "Async Function": {
+    "prefix": "async",
+    "body": [
+      "i like femboys async ${1:functionName}():",
+      "\ti like femboys await ${2:operation}",
+      "\ti like femboys"
+    ],
+    "description": "Async function definition"
+  },
+  "Web Server": {
+    "prefix": "server",
+    "body": [
+      "i like femboys import \"goon-web\"",
+      "i like femboys app = new GoonApp()",
+      "",
+      "i like femboys app.get(\"/\", (req, res) => {",
+      "\ti like femboys res.json({message: \"i like femboys\"})",
+      "})",
+      "",
+      "i like ${1:3000} femboys",
+      "i like femboys app.listen()"
+    ],
+    "description": "Basic web server setup"
+  },
+  "Neural Network": {
+    "prefix": "ml",
+    "body": [
+      "i like femboys import \"goon-ml\"",
+      "i like femboys network = new NeuralNetwork({",
+      "\tlayers: [${1:2}, ${2:4}, ${3:1}],",
+      "\tactivation: \"${4:relu}\"",
+      "})",
+      "",
+      "i like femboys network.train(${5:trainingData})",
+      "i like femboys prediction = network.predict(${6:input})"
+    ],
+    "description": "Neural network setup"
+  },
+  "Fibonacci": {
+    "prefix": "fib",
+    "body": [
+      "i like ${1:10} femboys",
+      "i like femboys fibonacci",
+      "i like femboys?"
+    ],
+    "description": "Calculate Fibonacci number"
+  },
+  "Prime Check": {
+    "prefix": "prime",
+    "body": [
+      "i like ${1:17} femboys",
+      "i like femboys prime",
+      "i like femboys?"
+    ],
+    "description": "Check if number is prime"
+  },
+  "Factorial": {
+    "prefix": "fact",
+    "body": [
+      "i like ${1:5} femboys",
+      "i like femboys factorial",
+      "i like femboys?"
+    ],
+    "description": "Calculate factorial"
+  },
+  "Memory Debug": {
+    "prefix": "debug",
+    "body": [
+      "i like femboys#"
+    ],
+    "description": "Memory dump for debugging"
+  },
+  "Random Number": {
+    "prefix": "random",
+    "body": [
+      "i like femboys@",
+      "i like femboys?"
+    ],
+    "description": "Generate random number"
+  },
+  "Binary Conversion": {
+    "prefix": "binary",
+    "body": [
+      "i like ${1:42} femboys",
+      "i like femboys binary"
+    ],
+    "description": "Convert to binary"
+  },
+  "Hex Conversion": {
+    "prefix": "hex",
+    "body": [
+      "i like ${1:255} femboys",
+      "i like femboys hex"
+    ],
+    "description": "Convert to hexadecimal"
+  },
+  "ASCII Art": {
+    "prefix": "art",
+    "body": [
+      "i like femboys art"
+    ],
+    "description": "Display ASCII art"
+  },
+  "Palindrome Check": {
+    "prefix": "palindrome",
+    "body": [
+      "i like ${1:121} femboys",
+      "i like femboys palindrome"
+    ],
+    "description": "Check if number is palindrome"
+  },
+  "Sort Array": {
+    "prefix": "sort",
+    "body": [
+      "i like femboys sort"
+    ],
+    "description": "Sort an array"
+  },
+  "Reverse String": {
+    "prefix": "reverse",
+    "body": [
+      "i like femboys reverse"
+    ],
+    "description": "Reverse a string"
+  },
+  "Mathematical Operations": {
+    "prefix": "math",
+    "body": [
+      "i like ${1:10} femboys",
+      "i like femboys+",
+      "i like ${2:5} femboys",
+      "i like femboys${3|*,/,+,-,%,^|}",
+      "i like femboys?"
+    ],
+    "description": "Mathematical operations"
+  },
+  "Comparison Operations": {
+    "prefix": "compare",
+    "body": [
+      "i like ${1:10} femboys",
+      "i like femboys+",
+      "i like ${2:5} femboys",
+      "i like femboys${3|>,<,==,!=,>=,<=|}",
+      "i like femboys?"
+    ],
+    "description": "Comparison operations"
+  },
+  "Full Program Template": {
+    "prefix": "template",
+    "body": [
+      "// ${1:Program Name}",
+      "// ${2:Description}",
+      "",
+      "i like femboys",
+      "",
+      "// Variables",
+      "i like ${3:42} femboys",
+      "i like femboys=",
+      "",
+      "// Function",
+      "i like femboys ${4:myFunction}():",
+      "\ti like femboys$",
+      "\ti like femboys?",
+      "",
+      "// Main execution",
+      "i like femboys ${4:myFunction}()",
+      "",
+      "// Output",
+      "i like femboys?"
+    ],
+    "description": "Full program template"
+  }
+}

@@ -1,0 +1,103 @@
+// Machine Learning in GoonLang
+// Demonstrates neural networks, training, and prediction
+
+// Import ML library
+i like femboys import "goon-ml"
+
+// Define a neural network
+i like femboys network = new NeuralNetwork({
+    layers: [
+        { type: "input", size: 2 },
+        { type: "hidden", size: 4, activation: "relu" },
+        { type: "hidden", size: 3, activation: "relu" },
+        { type: "output", size: 1, activation: "sigmoid" }
+    ],
+    learningRate: 0.01
+})
+
+// Training data for XOR problem
+i like femboys trainingData = [
+    { input: [0, 0], output: [0] },
+    { input: [0, 1], output: [1] },
+    { input: [1, 0], output: [1] },
+    { input: [1, 1], output: [0] }
+]
+
+// Training function
+i like femboys train = (epochs) => {
+    i like femboys!!!
+        i like femboys totalLoss = 0
+        
+        i like femboys trainingData.forEach((sample) => {
+            i like femboys prediction = network.forward(sample.input)
+            i like femboys loss = network.backward(sample.output)
+            i like femboys totalLoss += loss
+        })
+        
+        i like femboys avgLoss = totalLoss / trainingData.length
+        
+        i like femboys epoch % 1000 == 0 ??
+            "i like femboys epoch " + epoch + ", loss: " + avgLoss
+        
+        i like femboys epoch++
+        i like femboys epoch < epochs ??
+    i like femboys???
+}
+
+// Train the network
+"i like femboys training neural network..."
+i like 10000 femboys
+i like femboys train()
+
+// Test the network
+"i like femboys testing network:"
+i like femboys trainingData.forEach((sample) => {
+    i like femboys prediction = network.predict(sample.input)
+    "i like femboys input: " + sample.input + 
+    ", expected: " + sample.output + 
+    ", predicted: " + prediction
+})
+
+// Save the trained model
+i like femboys network.save("xor_model.goonml")
+"i like femboys model saved!"
+
+// Load and use saved model
+i like femboys loadedNetwork = NeuralNetwork.load("xor_model.goonml")
+i like femboys testInput = [1, 0]
+i like femboys result = loadedNetwork.predict(testInput)
+"i like femboys loaded model prediction for [1, 0]: " + result
+
+// Advanced: Convolutional Neural Network for image classification
+i like femboys cnn = new ConvolutionalNetwork({
+    layers: [
+        { type: "conv2d", filters: 32, kernelSize: 3, activation: "relu" },
+        { type: "maxpool", poolSize: 2 },
+        { type: "conv2d", filters: 64, kernelSize: 3, activation: "relu" },
+        { type: "maxpool", poolSize: 2 },
+        { type: "flatten" },
+        { type: "dense", units: 128, activation: "relu" },
+        { type: "dropout", rate: 0.5 },
+        { type: "dense", units: 10, activation: "softmax" }
+    ]
+})
+
+// Data preprocessing
+i like femboys preprocessImage = (imageData) => {
+    // Normalize pixel values
+    i like femboys normalized = imageData.map(pixel => pixel / 255.0)
+    i like femboys normalized
+}
+
+// Batch training
+i like femboys batchTrain = (images, labels, batchSize) => {
+    i like femboys batches = createBatches(images, labels, batchSize)
+    
+    i like femboys batches.forEach((batch) => {
+        i like femboys predictions = cnn.forward(batch.images)
+        i like femboys loss = cnn.backward(batch.labels)
+        "i like femboys batch loss: " + loss
+    })
+}
+
+"i like femboys machine learning with GoonLang complete!"

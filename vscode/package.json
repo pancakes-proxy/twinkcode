@@ -1,0 +1,282 @@
+{
+  "name": "goonlang",
+  "displayName": "GoonLang",
+  "description": "Language support for GoonLang - Advanced Programming Language with Unconventional Syntax",
+  "version": "2.0.0",
+  "publisher": "goonlang-foundation",
+  "icon": "images/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/goonlang/vscode-goonlang.git"
+  },
+  "bugs": {
+    "url": "https://github.com/goonlang/vscode-goonlang/issues"
+  },
+  "homepage": "https://goonlang.org",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Debuggers",
+    "Formatters",
+    "Linters",
+    "Snippets",
+    "Themes"
+  ],
+  "keywords": [
+    "goonlang",
+    "programming-language",
+    "syntax-highlighting",
+    "intellisense",
+    "debugger"
+  ],
+  "activationEvents": [
+    "onLanguage:goonlang"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "goonlang",
+        "aliases": [
+          "GoonLang",
+          "goonlang"
+        ],
+        "extensions": [
+          ".goon",
+          ".goonlib",
+          ".goonc"
+        ],
+        "configuration": "./language-configuration.json",
+        "icon": {
+          "light": "./images/file-icon-light.svg",
+          "dark": "./images/file-icon-dark.svg"
+        }
+      }
+    ],
+    "grammars": [
+      {
+        "language": "goonlang",
+        "scopeName": "source.goonlang",
+        "path": "./syntaxes/goonlang.tmLanguage.json"
+      }
+    ],
+    "themes": [
+      {
+        "label": "GoonLang Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/goonlang-dark-theme.json"
+      },
+      {
+        "label": "GoonLang Light",
+        "uiTheme": "vs",
+        "path": "./themes/goonlang-light-theme.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "goonlang",
+        "path": "./snippets/goonlang.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "goonlang.runFile",
+        "title": "Run GoonLang File",
+        "category": "GoonLang",
+        "icon": "$(play)"
+      },
+      {
+        "command": "goonlang.debugFile",
+        "title": "Debug GoonLang File",
+        "category": "GoonLang",
+        "icon": "$(debug-alt)"
+      },
+      {
+        "command": "goonlang.showAST",
+        "title": "Show AST",
+        "category": "GoonLang",
+        "icon": "$(symbol-structure)"
+      },
+      {
+        "command": "goonlang.showTokens",
+        "title": "Show Tokens",
+        "category": "GoonLang",
+        "icon": "$(symbol-array)"
+      },
+      {
+        "command": "goonlang.formatDocument",
+        "title": "Format Document",
+        "category": "GoonLang",
+        "icon": "$(symbol-color)"
+      },
+      {
+        "command": "goonlang.startREPL",
+        "title": "Start REPL",
+        "category": "GoonLang",
+        "icon": "$(terminal)"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "when": "resourceExtname == .goon",
+          "command": "goonlang.runFile",
+          "group": "navigation"
+        },
+        {
+          "when": "resourceExtname == .goon",
+          "command": "goonlang.debugFile",
+          "group": "navigation"
+        }
+      ],
+      "editor/context": [
+        {
+          "when": "resourceExtname == .goon",
+          "command": "goonlang.showAST",
+          "group": "goonlang"
+        },
+        {
+          "when": "resourceExtname == .goon",
+          "command": "goonlang.showTokens",
+          "group": "goonlang"
+        }
+      ],
+      "explorer/context": [
+        {
+          "when": "resourceExtname == .goon",
+          "command": "goonlang.runFile",
+          "group": "goonlang"
+        }
+      ]
+    },
+    "keybindings": [
+      {
+        "command": "goonlang.runFile",
+        "key": "ctrl+f5",
+        "when": "resourceExtname == .goon"
+      },
+      {
+        "command": "goonlang.debugFile",
+        "key": "f5",
+        "when": "resourceExtname == .goon"
+      },
+      {
+        "command": "goonlang.startREPL",
+        "key": "ctrl+shift+r",
+        "when": "resourceExtname == .goon"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "GoonLang",
+      "properties": {
+        "goonlang.interpreterPath": {
+          "type": "string",
+          "default": "goonlang",
+          "description": "Path to the GoonLang interpreter"
+        },
+        "goonlang.enableLinting": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable linting for GoonLang files"
+        },
+        "goonlang.enableFormatting": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable automatic formatting"
+        },
+        "goonlang.showAST": {
+          "type": "boolean",
+          "default": false,
+          "description": "Show AST in output panel"
+        },
+        "goonlang.debugMode": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable debug mode by default"
+        }
+      }
+    },
+    "debuggers": [
+      {
+        "type": "goonlang",
+        "label": "GoonLang Debug",
+        "program": "./out/debugAdapter.js",
+        "runtime": "node",
+        "configurationAttributes": {
+          "launch": {
+            "required": [
+              "program"
+            ],
+            "properties": {
+              "program": {
+                "type": "string",
+                "description": "Absolute path to a GoonLang file.",
+                "default": "${workspaceFolder}/${command:AskForProgramName}"
+              },
+              "stopOnEntry": {
+                "type": "boolean",
+                "description": "Automatically stop after launch.",
+                "default": true
+              },
+              "trace": {
+                "type": "boolean",
+                "description": "Enable logging of the Debug Adapter Protocol.",
+                "default": true
+              }
+            }
+          }
+        },
+        "initialConfigurations": [
+          {
+            "type": "goonlang",
+            "request": "launch",
+            "name": "Launch GoonLang",
+            "program": "${workspaceFolder}/${command:AskForProgramName}",
+            "stopOnEntry": true
+          }
+        ],
+        "configurationSnippets": [
+          {
+            "label": "GoonLang: Launch",
+            "description": "A new configuration for launching a GoonLang program",
+            "body": {
+              "type": "goonlang",
+              "request": "launch",
+              "name": "Launch GoonLang",
+              "program": "^\"\\${workspaceFolder}/\\${command:AskForProgramName}\"",
+              "stopOnEntry": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js",
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.74.0",
+    "@types/node": "16.x",
+    "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "@typescript-eslint/parser": "^5.45.0",
+    "eslint": "^8.28.0",
+    "typescript": "^4.9.4",
+    "@vscode/test-electron": "^2.2.0",
+    "vsce": "^2.15.0"
+  },
+  "dependencies": {
+    "vscode-debugadapter": "^1.51.0",
+    "vscode-debugprotocol": "^1.51.0"
+  }
+}

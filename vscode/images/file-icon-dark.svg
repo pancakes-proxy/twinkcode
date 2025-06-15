@@ -1,0 +1,15 @@
+<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="16" height="16" fill="#2d2d30" rx="2"/>
+  
+  <!-- Border -->
+  <rect width="16" height="16" fill="none" stroke="#FF69B4" stroke-width="0.5" rx="2"/>
+  
+  <!-- GoonLang symbol -->
+  <circle cx="8" cy="6" r="2" fill="#FF69B4"/>
+  <rect x="6" y="9" width="4" height="1" fill="#55CDFC"/>
+  <rect x="5" y="11" width="6" height="1" fill="#F7A8B8"/>
+  
+  <!-- File indicator -->
+  <rect x="12" y="2" width="2" height="2" fill="#FF69B4" rx="0.5"/>
+</svg>

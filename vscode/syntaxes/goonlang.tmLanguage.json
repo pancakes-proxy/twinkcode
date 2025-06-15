@@ -1,0 +1,242 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "GoonLang",
+  "scopeName": "source.goonlang",
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#numbers"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#operators"
+    },
+    {
+      "include": "#core-phrase"
+    },
+    {
+      "include": "#punctuation"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.double-slash.goonlang",
+          "begin": "//",
+          "end": "$",
+          "captures": {
+            "0": {
+              "name": "punctuation.definition.comment.goonlang"
+            }
+          }
+        },
+        {
+          "name": "comment.block.goonlang",
+          "begin": "/\\*",
+          "end": "\\*/",
+          "captures": {
+            "0": {
+              "name": "punctuation.definition.comment.goonlang"
+            }
+          }
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.goonlang",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "name": "constant.character.escape.goonlang",
+              "match": "\\\\."
+            }
+          ]
+        },
+        {
+          "name": "string.quoted.single.goonlang",
+          "begin": "'",
+          "end": "'",
+          "patterns": [
+            {
+              "name": "constant.character.escape.goonlang",
+              "match": "\\\\."
+            }
+          ]
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.decimal.goonlang",
+          "match": "\\b\\d+(\\.\\d+)?\\b"
+        },
+        {
+          "name": "constant.numeric.hex.goonlang",
+          "match": "\\b0[xX][0-9a-fA-F]+\\b"
+        },
+        {
+          "name": "constant.numeric.binary.goonlang",
+          "match": "\\b0[bB][01]+\\b"
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.goonlang",
+          "match": "\\b(class|function|if|else|while|for|return|import|export|try|catch|throw|async|await)\\b"
+        },
+        {
+          "name": "keyword.operator.logical.goonlang",
+          "match": "\\b(and|or|not)\\b"
+        },
+        {
+          "name": "constant.language.boolean.goonlang",
+          "match": "\\b(true|false|null|undefined)\\b"
+        },
+        {
+          "name": "storage.type.goonlang",
+          "match": "\\b(var|let|const)\\b"
+        }
+      ]
+    },
+    "core-phrase": {
+      "patterns": [
+        {
+          "name": "keyword.core.basic.goonlang",
+          "match": "\\bi\\s+like\\s+femboys\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.core.phrase.goonlang"
+            }
+          }
+        },
+        {
+          "name": "keyword.core.shout.goonlang",
+          "match": "\\bI\\s+LIKE\\s+FEMBOYS\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.core.phrase.emphasis.goonlang"
+            }
+          }
+        },
+        {
+          "name": "keyword.core.mixed.goonlang",
+          "match": "\\b[iI]\\s+[lL][iI][kK][eE]\\s+[fF][eE][mM][bB][oO][yY][sS]\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.core.phrase.mixed.goonlang"
+            }
+          }
+        },
+        {
+          "name": "keyword.core.reverse.goonlang",
+          "match": "\\bsyobmef\\s+ekil\\s+i\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.core.phrase.reverse.goonlang"
+            }
+          }
+        },
+        {
+          "name": "keyword.core.with-number.goonlang",
+          "match": "\\bi\\s+like\\s+\\d+\\s+femboys\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.core.phrase.numeric.goonlang"
+            }
+          }
+        },
+        {
+          "name": "keyword.core.special.goonlang",
+          "match": "\\bi\\s+like\\s+femboys\\s+(fibonacci|prime|factorial|sort|art|binary|hex|reverse|palindrome|class|import|export|try|catch|throw|length|type|clone)\\b",
+          "captures": {
+            "1": {
+              "name": "keyword.special.algorithm.goonlang"
+            }
+          }
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "name": "keyword.operator.assignment.goonlang",
+          "match": "="
+        },
+        {
+          "name": "keyword.operator.comparison.goonlang",
+          "match": "(==|!=|<=|>=|<|>)"
+        },
+        {
+          "name": "keyword.operator.arithmetic.goonlang",
+          "match": "(\\+|\\-|\\*|\\/|%|\\^)"
+        },
+        {
+          "name": "keyword.operator.logical.goonlang",
+          "match": "(&&|\\|\\||!)"
+        },
+        {
+          "name": "keyword.operator.bitwise.goonlang",
+          "match": "(&|\\||~|<<|>>)"
+        },
+        {
+          "name": "keyword.operator.special.goonlang",
+          "match": "(\\$|@|#)"
+        }
+      ]
+    },
+    "punctuation": {
+      "patterns": [
+        {
+          "name": "punctuation.goonlang.exclamation",
+          "match": "!{1,5}"
+        },
+        {
+          "name": "punctuation.goonlang.question",
+          "match": "\\?{1,3}"
+        },
+        {
+          "name": "punctuation.goonlang.dots",
+          "match": "\\.{1,3}"
+        },
+        {
+          "name": "punctuation.brackets.round.goonlang",
+          "match": "[\\(\\)]"
+        },
+        {
+          "name": "punctuation.brackets.square.goonlang",
+          "match": "[\\[\\]]"
+        },
+        {
+          "name": "punctuation.brackets.curly.goonlang",
+          "match": "[\\{\\}]"
+        },
+        {
+          "name": "punctuation.separator.comma.goonlang",
+          "match": ","
+        },
+        {
+          "name": "punctuation.separator.colon.goonlang",
+          "match": ":"
+        },
+        {
+          "name": "punctuation.separator.semicolon.goonlang",
+          "match": ";"
+        }
+      ]
+    }
+  }
+}

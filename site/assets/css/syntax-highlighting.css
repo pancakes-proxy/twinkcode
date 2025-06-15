@@ -1,0 +1,246 @@
+/* GoonLang Syntax Highlighting */
+
+/* Custom GoonLang syntax highlighting for Prism.js */
+.language-goon .token.comment,
+.language-goon .token.prolog,
+.language-goon .token.doctype,
+.language-goon .token.cdata {
+  color: #6A9955;
+  font-style: italic;
+}
+
+.language-goon .token.punctuation {
+  color: #D4D4D4;
+}
+
+.language-goon .token.property,
+.language-goon .token.tag,
+.language-goon .token.boolean,
+.language-goon .token.number,
+.language-goon .token.constant,
+.language-goon .token.symbol,
+.language-goon .token.deleted {
+  color: #B5CEA8;
+}
+
+.language-goon .token.selector,
+.language-goon .token.attr-name,
+.language-goon .token.string,
+.language-goon .token.char,
+.language-goon .token.builtin,
+.language-goon .token.inserted {
+  color: #CE9178;
+}
+
+.language-goon .token.operator,
+.language-goon .token.entity,
+.language-goon .token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #D4D4D4;
+}
+
+.language-goon .token.atrule,
+.language-goon .token.attr-value,
+.language-goon .token.keyword {
+  color: #569CD6;
+}
+
+.language-goon .token.function,
+.language-goon .token.class-name {
+  color: #DCDCAA;
+}
+
+.language-goon .token.regex,
+.language-goon .token.important,
+.language-goon .token.variable {
+  color: #FF6347;
+}
+
+/* GoonLang specific tokens */
+.language-goon .token.goon-phrase {
+  color: #FF69B4;
+  font-weight: bold;
+}
+
+.language-goon .token.goon-shout {
+  color: #FF1493;
+  font-weight: bold;
+}
+
+.language-goon .token.goon-mixed {
+  color: #DA70D6;
+  font-weight: bold;
+}
+
+.language-goon .token.goon-reverse {
+  color: #9370DB;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.language-goon .token.goon-number {
+  color: #FFB6C1;
+  font-weight: bold;
+}
+
+.language-goon .token.goon-algorithm {
+  color: #40E0D0;
+  font-weight: bold;
+}
+
+.language-goon .token.goon-operator {
+  color: #FF6347;
+  font-weight: bold;
+}
+
+.language-goon .token.goon-punctuation-exclamation {
+  color: #FF4500;
+  font-weight: bold;
+}
+
+.language-goon .token.goon-punctuation-question {
+  color: #32CD32;
+  font-weight: bold;
+}
+
+.language-goon .token.goon-punctuation-dots {
+  color: #FFD700;
+  font-weight: bold;
+}
+
+/* Code block styling */
+pre[class*="language-"] {
+  background: #1e1e1e;
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  overflow: auto;
+  font-family: var(--font-family-mono);
+  font-size: var(--text-sm);
+  line-height: var(--leading-relaxed);
+  margin: var(--space-4) 0;
+}
+
+code[class*="language-"] {
+  background: transparent;
+  color: #d4d4d4;
+  font-family: var(--font-family-mono);
+  font-size: var(--text-sm);
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: var(--leading-relaxed);
+  tab-size: 4;
+  hyphens: none;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  background: var(--gray-100);
+  color: var(--gray-800);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius);
+  white-space: normal;
+}
+
+/* Line highlighting */
+.line-highlight {
+  background: rgba(255, 105, 180, 0.1);
+  border-left: 4px solid var(--primary);
+  padding-left: var(--space-2);
+  margin-left: calc(-1 * var(--space-2));
+}
+
+/* Copy button for code blocks */
+.code-toolbar {
+  position: relative;
+}
+
+.code-toolbar .toolbar {
+  position: absolute;
+  top: var(--space-2);
+  right: var(--space-2);
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.code-toolbar:hover .toolbar {
+  opacity: 1;
+}
+
+.code-toolbar .toolbar-item {
+  display: inline-block;
+}
+
+.code-toolbar .toolbar-item button {
+  background: var(--gray-700);
+  color: var(--white);
+  border: none;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius);
+  font-size: var(--text-xs);
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.code-toolbar .toolbar-item button:hover {
+  background: var(--primary);
+}
+
+/* Language label */
+pre[class*="language-"]:before {
+  content: attr(data-language);
+  position: absolute;
+  top: var(--space-2);
+  left: var(--space-4);
+  background: var(--primary);
+  color: var(--white);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius);
+  font-size: var(--text-xs);
+  font-weight: var(--font-weight-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+pre[class*="language-goon"]:before {
+  content: "GoonLang";
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+}
+
+/* Scrollbar styling for code blocks */
+pre[class*="language-"]::-webkit-scrollbar {
+  height: 8px;
+}
+
+pre[class*="language-"]::-webkit-scrollbar-track {
+  background: var(--gray-800);
+  border-radius: var(--radius);
+}
+
+pre[class*="language-"]::-webkit-scrollbar-thumb {
+  background: var(--gray-600);
+  border-radius: var(--radius);
+}
+
+pre[class*="language-"]::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* Responsive code blocks */
+@media (max-width: 768px) {
+  pre[class*="language-"] {
+    padding: var(--space-4);
+    font-size: var(--text-xs);
+    border-radius: var(--radius);
+  }
+  
+  .code-toolbar .toolbar {
+    position: static;
+    opacity: 1;
+    margin-top: var(--space-2);
+    text-align: right;
+  }
+}

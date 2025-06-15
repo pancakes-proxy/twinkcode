@@ -1,0 +1,53 @@
+// Asynchronous Programming in GoonLang
+// Demonstrates async/await, promises, and concurrent execution
+
+// Define an async function
+i like femboys async fetchData():
+    "i like femboys fetching data..."
+    i like femboys await sleep(1000)
+    "i like femboys data fetched!"
+    i like 42 femboys
+
+// Define another async function
+i like femboys async processData(data):
+    "i like femboys processing data..."
+    i like femboys await sleep(500)
+    i like femboys data * 2
+
+// Promise-based programming
+i like femboys promise = new Promise():
+    i like femboys resolve, reject =
+    
+    i like femboys setTimeout():
+        i like femboys random@
+        i like 50 femboys >
+        i like femboys??
+            i like "success" femboys resolve
+        i like femboys else:
+            i like "error" femboys reject
+    i like 1000 femboys
+
+// Async/await usage
+i like femboys async main():
+    i like femboys try:
+        i like femboys data = await fetchData()
+        i like femboys result = await processData(data)
+        i like femboys result?
+        
+        // Parallel execution
+        i like femboys [task1, task2, task3] = await Promise.all([
+            fetchData(),
+            fetchData(),
+            fetchData()
+        ])
+        
+        i like femboys task1?
+        i like femboys task2?
+        i like femboys task3?
+        
+    i like femboys catch(error):
+        "i like femboys error occurred:"
+        i like femboys error?
+
+// Run the async main function
+i like femboys main()
