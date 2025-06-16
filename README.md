@@ -1,4 +1,4 @@
-# GoonLang 🏳️‍⚧️ - Enterprise Edition
+# GoonLang 🏳️‍⚧️
 
 [![Build Status](https://github.com/goonlang/goonlang/workflows/CI/badge.svg)](https://github.com/goonlang/goonlang/actions)
 [![Coverage](https://codecov.io/gh/goonlang/goonlang/branch/main/graph/badge.svg)](https://codecov.io/gh/goonlang/goonlang)
